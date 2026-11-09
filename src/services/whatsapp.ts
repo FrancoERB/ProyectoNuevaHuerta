@@ -1,7 +1,7 @@
 
 import type { CartItem } from '../types'
 
-const WHATSAPP_NUMBER = '549XXXXXXXXXX'
+const WHATSAPP_NUMBER = '5492615778057'
 
 export function sendOrderByWhatsApp(items: CartItem[], total: number) {
   const formatPrice = (price: number) =>
@@ -26,7 +26,7 @@ ${products}
 ¡Muchas gracias!
   `.trim()
 
-  const url = `https://wa.me/${5492615778047}?text=${encodeURIComponent(message)}`
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 
   window.open(url, '_blank')
 }
