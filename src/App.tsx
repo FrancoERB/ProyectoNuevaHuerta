@@ -1,30 +1,30 @@
+import AboutSection from "./components/home/AboutSection";
+import BenefitsSection from "./components/home/BenefictsSection";
 import BoxesSection from "./components/home/BoxesSection";
+import ContactSection from "./components/home/ContactSection";
+import FAQSection from "./components/home/FAQSection";
 import Hero from "./components/home/Hero";
+import HowItWorksSection from "./components/home/HowitWorkSelection";
+import Footer from "./components/layouts/Footer";
 import Navbar from "./components/layouts/Navbar";
-
+import { CartProvider } from "./context/CartContext";
 function App() {
   return (
-    <>
+    <CartProvider>
       <Navbar />
 
       <main>
         <Hero />
         <BoxesSection />
+        <HowItWorksSection />
+        <BenefitsSection />
+        <AboutSection />
+        <FAQSection />
+        <ContactSection />
       </main>
 
-      <footer
-        id="contacto"
-        className="bg-green-950 text-white py-10 text-center"
-      >
-        <h3 className="text-2xl font-black">NUEVA HUERTA</h3>
-        <p className="text-green-200 text-sm mt-2">
-          Frescura y calidad directo a tu hogar.
-        </p>
-        <p className="text-green-300/60 text-xs mt-6">
-          © 2026 Nueva Huerta. Todos los derechos reservados.
-        </p>
-      </footer>
-    </>
+      <Footer />
+    </CartProvider>
   );
 }
 
